@@ -1,0 +1,31 @@
+INSERT INTO groups (group_name)
+VALUES
+('Ручки'),
+('Тетради');
+
+INSERT INTO products
+(product_name, group_id, unit, price)
+VALUES
+('Синяя ручка', 1, 'шт', 50),
+('Тетрадь 48л', 2, 'шт', 120);
+
+INSERT INTO suppliers (supplier_name, phone)
+VALUES
+('ООО КанцМир', '+799999999');
+
+INSERT INTO incoming_invoice
+(supplier_id, invoice_date, total_sum)
+VALUES
+(1, CURRENT_DATE, 5000);
+
+INSERT INTO incoming_items
+(invoice_id, product_id, quantity, price)
+VALUES
+(1, 1, 10, 50),
+(1, 2, 5, 120);
+
+INSERT INTO payments
+(invoice_id, payment_date, amount)
+VALUES
+(1, CURRENT_DATE, 1000),
+(1, CURRENT_DATE, 500);
